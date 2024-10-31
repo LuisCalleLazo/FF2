@@ -1455,9 +1455,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1614319762}
-        m_TargetAssemblyTypeName: MotorCarretera, Assembly-CSharp
-        m_MethodName: GameOverStates
+      - m_Target: {fileID: 177836790}
+        m_TargetAssemblyTypeName: CarController, Assembly-CSharp
+        m_MethodName: RestartScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

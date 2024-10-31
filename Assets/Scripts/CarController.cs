@@ -45,12 +45,13 @@ public class CarController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
     IEnumerator RestartSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         RestartScene();
     }
-    void RestartScene()
+    public void RestartScene()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
