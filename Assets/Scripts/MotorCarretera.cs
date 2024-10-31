@@ -21,6 +21,11 @@ public class MotorCarretera : MonoBehaviour
     public GameObject calleNew;
 
     public float sizeCalle;
+
+    public GameObject cocheGo;
+    public GameObject audioFxGo;
+    public AudioFx audioFxScript;
+    public GameObject bgFinalGo;
     void Start()
     {
         StartGame();
@@ -32,6 +37,14 @@ public class MotorCarretera : MonoBehaviour
         
         mCamGo = GameObject.Find("Main Camera");
         mCamComp = mCamGo.GetComponent<Camera>();
+
+        bgFinalGo = GameObject.Find("PanelGameOver");
+        bgFinalGo.SetActive(false);
+
+        audioFxGo = GameObject.Find("AudioFx");
+        audioFxScript = audioFxGo.GetComponent<AudioFx>();
+
+        cocheGo = GameObject.FindObjectOfType<Car>().gameObject;
 
         speedMotorRoad();
         ExtendScreen();
