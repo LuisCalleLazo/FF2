@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -521}
+  m_AnchoredPosition: {x: 0, y: -468.11}
   m_SizeDelta: {x: 636.2955, y: 159.704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109369313
@@ -1408,7 +1408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -280}
+  m_AnchoredPosition: {x: 0, y: -245}
   m_SizeDelta: {x: 880.2519, y: 138.3598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891195025
@@ -1454,7 +1454,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 891195026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1614319762}
+        m_TargetAssemblyTypeName: MotorCarretera, Assembly-CSharp
+        m_MethodName: GameOverStates
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &891195026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,7 +2181,7 @@ GameObject:
   - component: {fileID: 1025628642}
   - component: {fileID: 1025628641}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelGameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2963,6 +2975,10 @@ MonoBehaviour:
   calleLast: {fileID: 0}
   calleNew: {fileID: 0}
   sizeCalle: 0
+  cocheGo: {fileID: 0}
+  audioFxGo: {fileID: 0}
+  audioFxScript: {fileID: 0}
+  bgFinalGo: {fileID: 0}
 --- !u!4 &1614319763
 Transform:
   m_ObjectHideFlags: 0
@@ -3409,6 +3425,7 @@ MonoBehaviour:
   distance: 0
   textTime: {fileID: 181818472}
   textDistance: {fileID: 818224431}
+  textDistanceFinal: {fileID: 109369313}
 --- !u!1 &2000766429
 GameObject:
   m_ObjectHideFlags: 0

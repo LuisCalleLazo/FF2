@@ -10,6 +10,7 @@ public class Chronometer : MonoBehaviour
     public float distance;
     public Text textTime;
     public Text textDistance;
+    public Text textDistanceFinal;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Chronometer : MonoBehaviour
         motorRoadsGo = GameObject.Find("MotorCarretera");
         motorRoadController = motorRoadsGo.GetComponent<MotorCarretera>();
 
-        time = 120;
+        time = 20;
 
         textTime.text = $"0 : {(int)time}";
         textDistance.text = "0";
@@ -31,7 +32,11 @@ public class Chronometer : MonoBehaviour
             CalculateTimeDistance();
 
         if(time <= 0 && !motorRoadController.endGame)
+        {
             motorRoadController.endGame = true;
+            motorRoadController.GameOverStates();
+            textDistanceFinal.text = ((int)distance).ToString() + " mts";
+        }
     }
 
     void CalculateTimeDistance()
