@@ -50,6 +50,14 @@ public class MotorCarretera : MonoBehaviour
         ExtendScreen();
         SearchCalle();
     }
+
+
+    public void GameOverStates()
+    {
+        cocheGo.GetComponent<AudioSource>().Stop();
+        audioFxScript.FXMusic();
+        bgFinalGo.SetActive(true);
+    }
     
     void createCalle() 
     {
